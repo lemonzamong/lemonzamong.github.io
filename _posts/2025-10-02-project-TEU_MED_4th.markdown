@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "TEU MED - 갱년기 우울 케어 솔루션"
+title:  "TEU MED 사회 혁신가 양성 프로그램"
 date:   2025-10-02 00:00:36 +0900
 categories: 스타트업 창업 프로젝트
 ---
