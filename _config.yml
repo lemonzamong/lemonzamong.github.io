@@ -1,3 +1,6 @@
+url: "https://lemonzamong.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+
 title: 혁준의 블로그
 author: Hyeokjun Kwon
 email: june2450@naver.com
@@ -55,7 +58,6 @@ plainwhite:
 # Build settings
 # remote_theme: samarsault/plainwhite-jekyll
 theme: plainwhite
-
 
 plugins:
   - jekyll-seo-tag
