@@ -1,0 +1,27 @@
+[
+  
+    {
+      "title"    : "GNN-Transformer Task Planning",
+      "title-lower"    : "gnn-transformer task planning",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "논문프로젝트학회AAAI",
+      "tags"     : "",
+      "url"      : "/%EB%85%BC%EB%AC%B8/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%95%99%ED%9A%8C/aaai/2025/10/01/project-gnn-tamp.html",
+      "date"     : "2025-10-01 11:03:36 +0900",
+      "content"     : "본 포스트에서는 ‘GNN-Transformer Task Planning Enhanced with Semantic-Driven Data Augmentation’ 프로젝트에 대해 소개합니다. 이 프로젝트는 자연어 명령을 이해하고 실제 환경에서 복잡한 작업을 수행할 수 있는 로봇을 위한 새로운 태스크 플래닝(Task Planning) 기술을 다룹니다.서론 ..."
+    } ,
+  
+    {
+      "title"    : "첫 번째 블로그 글",
+      "title-lower"    : "첫 번째 블로그 글",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "일상",
+      "tags"     : "",
+      "url"      : "/%EC%9D%BC%EC%83%81/2025/10/01/first-blog.html",
+      "date"     : "2025-10-01 11:03:36 +0900",
+      "content"     : "안녕하세요! 드디어 제 블로그의 첫 번째 글을 작성합니다.이곳에는 앞으로 제가 배우는 기술과 생각들을 기록할 예정입니다.  기술 동향 분석  프로젝트 기록  일상 이야기잘 부탁드립니다!"
+    } 
+  
+]

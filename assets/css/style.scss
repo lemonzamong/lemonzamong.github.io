@@ -1,0 +1,32 @@
+---
+---
+
+@import "plain";
+
+{% if site.plainwhite.search %}
+  @import "search";
+{% endif %}
+
+{%- if site.plainwhite.dark_mode -%}
+  @import "toggle";
+  @import "dark";
+{%- endif -%}
+
+
+/* =========================================
+   여기서부터 추가된 폰트 설정 코드입니다.
+   기존 테마의 폰트 설정을 덮어씁니다.
+   ========================================= */
+
+/* 기본 폰트 설정 (본문, 제목 등 모든 텍스트에 적용) */
+body, h1, h2, h3, h4, h5, h6, p, a, li, span, div {
+  font-family: 'Noto Sans KR', sans-serif !important;
+  -webkit-font-smoothing: antialiased; /* 맥/iOS에서 글자 부드럽게 */
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.7; /* 줄 간격을 살짝 넓혀 가독성 향상 */
+}
+
+/* 코드 블록 폰트 설정 */
+pre, code, kbd, samp {
+  font-family: 'Source Code Pro', monospace !important;
+}
