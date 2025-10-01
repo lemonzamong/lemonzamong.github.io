@@ -1,6 +1,18 @@
 [
   
     {
+      "title"    : "Reconstruction Dataset for Deformable Object Manipulation",
+      "title-lower"    : "reconstruction dataset for deformable object manipulation",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "KAIST프로젝트인턴",
+      "tags"     : "",
+      "url"      : "/kaist/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%EC%9D%B8%ED%84%B4/2025/10/01/project-oring-dataset.html",
+      "date"     : "2025-10-01 11:03:36 +0900",
+      "content"     : "본 포스트에서는 2024년 12월부터 2025년 2월까지 KAIST 강인공지능 로보틱스 연구실(RIRO Lab)에서 학부 인턴으로 참여하며 진행했던 ‘O-ring Reconstruction Dataset’ 구축 프로젝트에 대해 기록하고자 합니다. 이 프로젝트는 비정형 물체(deformable object) 조작이라는 새로운 분야에 도전하고, Sim-t..."
+    } ,
+  
+    {
       "title"    : "GNN-Transformer Task Planning",
       "title-lower"    : "gnn-transformer task planning",
       "sub-titile" : "",
@@ -21,7 +33,7 @@
       "tags"     : "",
       "url"      : "/%EC%9D%BC%EC%83%81/2025/10/01/first-blog.html",
       "date"     : "2025-10-01 11:03:36 +0900",
-      "content"     : "안녕하세요! 드디어 제 블로그의 첫 번째 글을 작성합니다.이곳에는 앞으로 제가 배우는 기술과 생각들을 기록할 예정입니다.  기술 동향 분석  프로젝트 기록  일상 이야기잘 부탁드립니다!"
+      "content"     : "안녕하세요! 드디어 제 블로그의 첫 번째 글을 작성합니다. 이곳에는 앞으로 제가 배우는 기술과 생각들을 기록할 예정입니다.  기술 동향 분석  프로젝트 기록  일상 이야기잘 부탁드립니다!"
     } 
   
 ]
