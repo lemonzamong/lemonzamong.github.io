@@ -5,7 +5,7 @@ date:   2025-10-01 11:03:36 +0900
 categories: 논문 프로젝트 학회 AAAI
 ---
 
-본 포스트에서는 'GNN-Transformer Task Planning Enhanced with Semantic-Driven Data Augmentation' 프로젝트에 대해 소개합니다. 이 프로젝트는 자연어 명령을 이해하고 실제 환경에서 복잡한 작업을 수행할 수 있는 로봇을 위한 새로운 태스크 플래닝(Task Planning) 기술을 다룹니다.
+본 포스트에서는 학부 연구생으로 한양대학교 로봇 AI Lab(Robots with Humans Lab)에 참여하며 진행했던 'GNN-Transformer Task Planning' 연구에 대해 기록하고자 합니다. 이 연구는 자연어 명령을 이해하고 실제 환경에서 복잡한 작업을 수행할 수 있는 로봇을 위한 새로운 태스크 플래닝(Task Planning) 기술 개발을 목표로 하였습니다.
 
 ## 서론 (Introduction)
 
@@ -80,5 +80,7 @@ GTTP는 기존의 SOTA 모델들(GPT-4, GOALNET 등)과 비교하여 **Seen/Unse
 ### 한계점
 *   데이터 증강 방식이 아직은 기존 태스크와 유사한 패턴을 벗어나기 어렵습니다.
 *   로봇이 임무 중 실패했을 때, 스스로 계획을 수정하는 **재계획(Replanning) 기능**은 아직 부족합니다.
+
+이 프로젝트를 통해 얻은 가장 큰 성과는 'GNN-Transformer Task Planning...' 이라는 제목으로 **AAAI 2025 학회에 공저자로 논문을 게재**하게 된 것입니다. 학부생으로서 아이디어를 내고, 데이터 파이프라인을 구축하며, 실제 로봇 시스템에 적용하는 전 과정에 참여하여 세계적인 학회에 성과를 인정받았다는 점에서 큰 보람을 느꼈습니다.
 
 앞으로 이러한 한계점을 개선하여 더욱 지능적이고 강건한 로봇 시스템을 구축해나갈 계획입니다.
