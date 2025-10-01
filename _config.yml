@@ -53,13 +53,12 @@ plainwhite:
 # - about.md
 
 # Build settings
-remote_theme: samarsault/plainwhite-jekyll
+# remote_theme: samarsault/plainwhite-jekyll
 theme: plainwhite
 
 
 plugins:
   - jekyll-seo-tag
-  - jekyll-remote_theme
 #  - jekyll-feed
 
 # _config.yml 파일 맨 아래에 추가
