@@ -2,7 +2,7 @@
 layout: post
 title:  "Reconstruction Dataset for Deformable Object Manipulation"
 date:   2025-10-01 11:03:36 +0900
-categories: KAIST 프로젝트 인턴
+categories: KAIST 프로젝트 인턴 로봇
 ---
 본 포스트에서는 2024년 12월부터 2025년 2월까지 KAIST 강인공지능 로보틱스 연구실(RIRO Lab)에서 학부 인턴으로 참여하며 진행했던 'O-ring Reconstruction Dataset' 구축 프로젝트에 대해 기록하고자 합니다. 이 프로젝트는 비정형 물체(deformable object) 조작이라는 새로운 분야에 도전하고, Sim-to-Real 문제에 더 깊이 파고드는 계기가 되었습니다.
 
