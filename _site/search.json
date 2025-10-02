@@ -49,6 +49,18 @@
     } ,
   
     {
+      "title"    : "ALE 필터를 이용한 ECG 신호 잡음 제거",
+      "title-lower"    : "ale 필터를 이용한 ecg 신호 잡음 제거",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "논문프로젝트학회신호처리의공학KIIT",
+      "tags"     : "",
+      "url"      : "/%EB%85%BC%EB%AC%B8/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%95%99%ED%9A%8C/%EC%8B%A0%ED%98%B8%EC%B2%98%EB%A6%AC/%EC%9D%98%EA%B3%B5%ED%95%99/kiit/2025/10/01/project-kits-ale.html",
+      "date"     : "2025-10-01 00:01:33 +0900",
+      "content"     : "본 포스트에서는 공학-의료 융합 프로젝트의 일환으로 진행했던 ‘심전도(ECG) 신호 잡음 제거’ 연구에 대해 기록하고자 합니다. 이 연구는 독거노인 고독사 문제 해결을 위한 실시간 심장 건강 모니터링 시스템 개발을 목표로 시작되었으며, 그 기술적 성과를 한국정보기술학회(KITS) 2025 하계 종합학술대회에 1저자로 발표하고 우수논문상을 수상하는 결실..."
+    } ,
+  
+    {
       "title"    : "TEU MED 사회 혁신가 양성 프로그램",
       "title-lower"    : "teu med 사회 혁신가 양성 프로그램",
       "sub-titile" : "",

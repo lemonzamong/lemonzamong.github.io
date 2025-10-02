@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+<!-- Google Fonts: Noto Sans KR (본문/제목) & Source Code Pro (코드) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>ALE 필터를 이용한 ECG 신호 잡음 제거</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>ALE 필터를 이용한 ECG 신호 잡음 제거 | 혁준의 블로그</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="ALE 필터를 이용한 ECG 신호 잡음 제거" />
+<meta name="author" content="Hyeokjun Kwon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="본 포스트에서는 공학-의료 융합 프로젝트의 일환으로 진행했던 ‘심전도(ECG) 신호 잡음 제거’ 연구에 대해 기록하고자 합니다. 이 연구는 독거노인 고독사 문제 해결을 위한 실시간 심장 건강 모니터링 시스템 개발을 목표로 시작되었으며, 그 기술적 성과를 한국정보기술학회(KITS) 2025 하계 종합학술대회에 1저자로 발표하고 우수논문상을 수상하는 결실을 보았습니다." />
+<meta property="og:description" content="본 포스트에서는 공학-의료 융합 프로젝트의 일환으로 진행했던 ‘심전도(ECG) 신호 잡음 제거’ 연구에 대해 기록하고자 합니다. 이 연구는 독거노인 고독사 문제 해결을 위한 실시간 심장 건강 모니터링 시스템 개발을 목표로 시작되었으며, 그 기술적 성과를 한국정보기술학회(KITS) 2025 하계 종합학술대회에 1저자로 발표하고 우수논문상을 수상하는 결실을 보았습니다." />
+<link rel="canonical" href="http://localhost:4000/%EB%85%BC%EB%AC%B8/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%95%99%ED%9A%8C/%EC%8B%A0%ED%98%B8%EC%B2%98%EB%A6%AC/%EC%9D%98%EA%B3%B5%ED%95%99/kiit/2025/10/01/project-kits-ale.html" />
+<meta property="og:url" content="http://localhost:4000/%EB%85%BC%EB%AC%B8/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%95%99%ED%9A%8C/%EC%8B%A0%ED%98%B8%EC%B2%98%EB%A6%AC/%EC%9D%98%EA%B3%B5%ED%95%99/kiit/2025/10/01/project-kits-ale.html" />
+<meta property="og:site_name" content="혁준의 블로그" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-01T00:01:33+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="ALE 필터를 이용한 ECG 신호 잡음 제거" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hyeokjun Kwon"},"dateModified":"2025-10-01T00:01:33+09:00","datePublished":"2025-10-01T00:01:33+09:00","description":"본 포스트에서는 공학-의료 융합 프로젝트의 일환으로 진행했던 ‘심전도(ECG) 신호 잡음 제거’ 연구에 대해 기록하고자 합니다. 이 연구는 독거노인 고독사 문제 해결을 위한 실시간 심장 건강 모니터링 시스템 개발을 목표로 시작되었으며, 그 기술적 성과를 한국정보기술학회(KITS) 2025 하계 종합학술대회에 1저자로 발표하고 우수논문상을 수상하는 결실을 보았습니다.","headline":"ALE 필터를 이용한 ECG 신호 잡음 제거","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EB%85%BC%EB%AC%B8/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%95%99%ED%9A%8C/%EC%8B%A0%ED%98%B8%EC%B2%98%EB%A6%AC/%EC%9D%98%EA%B3%B5%ED%95%99/kiit/2025/10/01/project-kits-ale.html"},"url":"http://localhost:4000/%EB%85%BC%EB%AC%B8/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%95%99%ED%9A%8C/%EC%8B%A0%ED%98%B8%EC%B2%98%EB%A6%AC/%EC%9D%98%EA%B3%B5%ED%95%99/kiit/2025/10/01/project-kits-ale.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/portfolio.png" alt="Hyeokjun Kwon" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Hyeokjun Kwon</a>
+      </h2>
+      </div><p class="tagline">Developer & Creator</p></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/lemonzamong" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/hyeokjun-kwon-6022912b1" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://instagram.com/jjjun_04" target="_blank">
+          <li>
+            <i class="icon-instagram"></i>
+          </li>
+        </a></ul><p class="about-footer condensed">&copy;
+        2025</p><div class="about-footer condensed">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/%EB%85%BC%EB%AC%B8/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%95%99%ED%9A%8C/%EC%8B%A0%ED%98%B8%EC%B2%98%EB%A6%AC/%EC%9D%98%EA%B3%B5%ED%95%99/kiit/2025/10/01/project-kits-ale.html">
+    <h2 class="post-title">ALE 필터를 이용한 ECG 신호 잡음 제거</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Oct 1, 2025</div><ul class="post-categories"><li>논문</li><li>프로젝트</li><li>학회</li><li>신호처리</li><li>의공학</li><li>KIIT</li></ul></div>
+  <div class="post">
+    <p>본 포스트에서는 공학-의료 융합 프로젝트의 일환으로 진행했던 ‘심전도(ECG) 신호 잡음 제거’ 연구에 대해 기록하고자 합니다. 이 연구는 독거노인 고독사 문제 해결을 위한 실시간 심장 건강 모니터링 시스템 개발을 목표로 시작되었으며, 그 기술적 성과를 <strong>한국정보기술학회(KITS) 2025 하계 종합학술대회에 1저자로 발표하고 우수논문상을 수상</strong>하는 결실을 보았습니다.</p>
+
+<h2 id="서론-introduction">서론 (Introduction)</h2>
+
+<h3 id="연구-배경-및-목적">연구 배경 및 목적</h3>
+<p>심전도(ECG)는 심장의 전기적 활동을 비침습적으로 측정하여 심장 질환을 진단하는 데 필수적인 생체 신호입니다. 하지만 실제 측정 환경에서는 사용자의 움직임, 근육의 긴장, 주변 전자기기 등 다양한 요인으로 인해 ‘잡음(Noise)’이 쉽게 섞이게 됩니다. 이렇게 오염된 신호는 심장의 상태를 정확히 파악하는 것을 방해하여 진단의 신뢰도를 떨어뜨립니다.</p>
+
+<p>본 연구의 목표는 이러한 잡음을 효과적으로 제거하여 깨끗하고 분석 가능한 ECG 신호를 복원하는 강력한 디지털 신호 처리 알고리즘을 개발하는 것이었습니다.</p>
+
+<h3 id="연구의-핵심-과제">연구의 핵심 과제</h3>
+<p>ECG 신호에 섞이는 잡음은 특성이 매우 다양합니다. 근육 잡음처럼 넓은 주파수 대역에 퍼져있는 광대역 잡음과 전력선 간섭처럼 특정 주파수에 집중된 협대역 잡음이 혼재합니다. 따라서 고정된 필터만으로는 변화무쌍한 실제 잡음 환경에 대응하기 어렵습니다.</p>
+
+<h3 id="핵심-아이디어-신호의-주기성을-이용한-적응형-필터">핵심 아이디어: 신호의 ‘주기성’을 이용한 적응형 필터</h3>
+<p>저희는 이 문제를 해결하기 위해 <strong>적응형 라인 향상기(Adaptive Line Enhancer, ALE)</strong> 라는 적응형 필터링 기법을 제안했습니다. ALE의 핵심 아이디어는 신호와 잡음의 ‘상관관계’ 특성 차이를 이용하는 것입니다.</p>
+
+<ul>
+  <li><strong>ECG 신호:</strong> 심장 박동은 주기적인 패턴을 가지므로, 현재의 신호는 잠시 전의 신호와 높은 연관성(상관관계)을 가집니다.</li>
+  <li><strong>잡음:</strong> 대부분의 잡음은 무작위적(random)이므로, 시간적으로 연관성이 거의 없습니다.</li>
+</ul>
+
+<p>ALE 필터는 이러한 특성을 이용해, 입력 신호에서 주기적인 성분(ECG)은 예측하여 남기고, 비주기적인 성분(잡음)은 걸러내는 방식으로 작동합니다. 마치 시끄러운 군중 속에서 일정한 리듬을 가진 가수의 목소리만 분리해내는 것과 같습니다.</p>
+
+<h2 id="2-구현-및-실험-방법">2. 구현 및 실험 방법</h2>
+
+<p>[그림 1: MATLAB을 이용한 ALE 필터 시뮬레이션 결과]
+<img src="/assets/img/project-kits-ale/ecg_filter_result.png" alt="ECG Noise Reduction Result" /></p>
+
+<p>제안한 아이디어의 성능을 검증하기 위해 MATLAB 환경에서 시뮬레이션을 진행했습니다.</p>
+
+<ol>
+  <li><strong>신호 생성:</strong> 먼저, 이상적인 ‘깨끗한 ECG 신호’를 생성했습니다.</li>
+  <li><strong>잡음 추가:</strong> 실제 측정 환경을 모사하기 위해 이 신호에 백색 가우시안 잡음(White Gaussian Noise)을 인위적으로 추가하여 심하게 오염된 신호를 만들었습니다.</li>
+  <li><strong>ALE 필터 적용:</strong> 직접 구현한 ALE 필터 알고리즘을 이 잡음 섞인 신호에 적용하여 신호를 복원하는 실험을 수행했습니다.</li>
+</ol>
+
+<p>필터의 성능에 영향을 미치는 차수(L), 지연 샘플 수(Δ), 학습률(μ) 등의 주요 파라미터들을 조정하며 최적의 잡음 제거 성능을 내는 조건을 탐색했습니다.</p>
+
+<h2 id="3-실험-결과-및-분석">3. 실험 결과 및 분석</h2>
+
+<p>실험 결과는 매우 성공적이었습니다. 위 그림에서 (a)는 잡음이 심하게 섞여 심장 박동의 특징적인 P-QRS-T 파형을 전혀 알아볼 수 없는 원본 신호입니다. 반면, (b)는 ALE 필터를 거친 후의 신호로, 잡음이 현저히 감소하고 원래의 깨끗한 ECG 파형이 뚜렷하게 복원된 것을 확인할 수 있습니다.</p>
+
+<p>이는 ALE 필터가 신호와 잡음의 주기성 차이를 효과적으로 이용하여 ECG 신호의 핵심 정보는 보존하면서 광대역 잡음을 성공적으로 분리 및 제거했음을 의미합니다. 특히 이 필터는 실시간으로 변하는 잡음 환경에 스스로 ‘적응’하여 계수를 최적화할 수 있어, 웨어러블 기기처럼 동적인 환경에 매우 적합합니다.</p>
+
+<h2 id="4-결론-및-의의">4. 결론 및 의의</h2>
+
+<h3 id="성과">성과</h3>
+<ol>
+  <li>적응형 라인 향상(ALE) 필터가 ECG 신호 처리 분야에서 강력하고 효과적인 잡음 제거 도구로 활용될 수 있음을 시뮬레이션을 통해 입증했습니다.</li>
+  <li>이 연구 결과를 <strong>한국정보기술학회에 1저자로 발표하고 우수논문상을 수상</strong>하며, 아이디어의 독창성과 기술적 우수성을 인정받았습니다.</li>
+</ol>
+
+<h3 id="개인적-성장과-연결">개인적 성장과 연결</h3>
+<p>이 프로젝트는 제게 단순한 알고리즘 개발을 넘어, ‘디지털 신호 처리’라는 학문적 이론이 어떻게 ‘독거노인 건강 모니터링’이라는 구체적인 사회 문제를 해결하는 실질적인 도구가 될 수 있는지 깊이 체감하게 한 소중한 경험이었습니다.</p>
+
+  </div></div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/lemonzamong" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/hyeokjun-kwon-6022912b1" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://instagram.com/jjjun_04" target="_blank">
+          <li>
+            <i class="icon-instagram"></i>
+          </li>
+        </a></ul><p class="about-footer condensed">&copy;
+        2025</p><div class="about-footer condensed">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>
