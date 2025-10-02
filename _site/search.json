@@ -13,18 +13,6 @@
     } ,
   
     {
-      "title"    : "TEU MED - 갱년기 우울 케어 솔루션",
-      "title-lower"    : "teu med - 갱년기 우울 케어 솔루션",
-      "sub-titile" : "",
-      "sub-titile-lower" : "",
-      "categories" : "스타트업창업프로젝트",
-      "tags"     : "",
-      "url"      : "/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%EC%B0%BD%EC%97%85/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/2025/10/02/project-TEU_MED_4th.html",
-      "date"     : "2025-10-02 00:00:36 +0900",
-      "content"     : "2024년 4월 ~ 6월, 동그라미재단에서 주최하는 혁신가 양성 프로그램 TEU (Tide Envision University) MED 과정에 참여했습니다. 기술로 의료 및 헬스케어 난제를 해결하는 이 과정에서, 저는 전자공학도 ‘네오’로서 의대 교수님, 사회적 기업 CEO 등 각 분야의 시니어 전문가분들과 한 팀(6조)이 되는 특별한 경험을 했습니다..."
-    } ,
-  
-    {
       "title"    : "Reconstruction Dataset for Deformable Object Manipulation",
       "title-lower"    : "reconstruction dataset for deformable object manipulation",
       "sub-titile" : "",
@@ -45,7 +33,31 @@
       "tags"     : "",
       "url"      : "/%EB%85%BC%EB%AC%B8/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%95%99%ED%9A%8C/%EB%A1%9C%EB%B4%87/aaai/2025/10/01/project-gnn-tamp.html",
       "date"     : "2025-10-01 11:03:36 +0900",
-      "content"     : "본 포스트에서는 학부 연구생으로 한양대학교 로봇 AI Lab(Robots with Humans Lab)에 참여하며 진행했던 ‘GNN-Transformer Task Planning’ 연구에 대해 기록하고자 합니다. 이 연구는 자연어 명령을 이해하고 실제 환경에서 복잡한 작업을 수행할 수 있는 로봇을 위한 새로운 태스크 플래닝(Task Planning) ..."
+      "content"     : "본 포스트에서는 2024년 6월 ~ 12월 동안 학부 연구생으로 한양대학교 로봇 AI Lab(Robots with Humans Lab)에 참여하며 진행했던 ‘GNN-Transformer Task Planning’ 연구에 대해 기록하고자 합니다. 이 연구는 자연어 명령을 이해하고 실제 환경에서 복잡한 작업을 수행할 수 있는 로봇을 위한 새로운 태스크 플..."
+    } ,
+  
+    {
+      "title"    : "Deformable Object Manipulation Policy Learning by DQN",
+      "title-lower"    : "deformable object manipulation policy learning by dqn",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "논문프로젝트학회로봇ICORS",
+      "tags"     : "",
+      "url"      : "/%EB%85%BC%EB%AC%B8/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/%ED%95%99%ED%9A%8C/%EB%A1%9C%EB%B4%87/icors/2025/10/01/project-icros-dqn.html",
+      "date"     : "2025-10-01 11:03:33 +0900",
+      "content"     : "본 포스트에서는 2024년 3월 ~ 12월, 교내 교수학습센터의 지원을 받아 1저자로서 주도했던 ‘의류 정리 로봇’ 연구에 대해 기록하고자 합니다. 이 연구는 딥러닝 비전 기술과 강화학습을 결합하여 로봇이 스스로 의류(수건)를 접는 방법을 학습하는 가능성을 탐구했으며, 그 성과를 제어로봇시스템학회(ICROS) 2025에 발표하게 되었습니다.서론 (In..."
+    } ,
+  
+    {
+      "title"    : "TEU MED 사회 혁신가 양성 프로그램",
+      "title-lower"    : "teu med 사회 혁신가 양성 프로그램",
+      "sub-titile" : "",
+      "sub-titile-lower" : "",
+      "categories" : "스타트업창업프로젝트",
+      "tags"     : "",
+      "url"      : "/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%EC%B0%BD%EC%97%85/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/2025/10/01/project-TEU_MED_4th.html",
+      "date"     : "2025-10-01 00:00:36 +0900",
+      "content"     : "2024년 4월 ~ 6월, 동그라미재단에서 주최하는 혁신가 양성 프로그램 TEU (Tide Envision University) MED 과정에 참여했습니다. 기술로 의료 및 헬스케어 난제를 해결하는 이 과정에서, 저는 전자공학도 ‘네오’로서 의대 교수님, 사회적 기업 CEO 등 각 분야의 시니어 전문가분들과 한 팀(6조)이 되는 특별한 경험을 했습니다..."
     } ,
   
     {
@@ -56,7 +68,7 @@
       "categories" : "일상",
       "tags"     : "",
       "url"      : "/%EC%9D%BC%EC%83%81/2025/10/01/first-blog.html",
-      "date"     : "2025-10-01 11:03:36 +0900",
+      "date"     : "2025-10-01 00:00:00 +0900",
       "content"     : "안녕하세요! 드디어 제 블로그의 첫 번째 글을 작성합니다. 이곳에는 앞으로 제가 배우는 기술과 생각들을 기록할 예정입니다.  기술 동향 분석  프로젝트 기록  일상 이야기잘 부탁드립니다!"
     } 
   

@@ -5,7 +5,7 @@ date:   2025-10-01 11:03:36 +0900
 categories: 논문 프로젝트 학회 로봇 AAAI
 ---
 
-본 포스트에서는 학부 연구생으로 한양대학교 로봇 AI Lab(Robots with Humans Lab)에 참여하며 진행했던 'GNN-Transformer Task Planning' 연구에 대해 기록하고자 합니다. 이 연구는 자연어 명령을 이해하고 실제 환경에서 복잡한 작업을 수행할 수 있는 로봇을 위한 새로운 태스크 플래닝(Task Planning) 기술 개발을 목표로 하였습니다.
+본 포스트에서는 2024년 6월 ~ 12월 동안 학부 연구생으로 한양대학교 로봇 AI Lab(Robots with Humans Lab)에 참여하며 진행했던 'GNN-Transformer Task Planning' 연구에 대해 기록하고자 합니다. 이 연구는 자연어 명령을 이해하고 실제 환경에서 복잡한 작업을 수행할 수 있는 로봇을 위한 새로운 태스크 플래닝(Task Planning) 기술 개발을 목표로 하였습니다.
 
 ## 서론 (Introduction)
 
