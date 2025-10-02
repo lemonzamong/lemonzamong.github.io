@@ -69,3 +69,12 @@ google-site-verification: "sBtf6gC4e4xkZ85q_Oz5Ws7b5t-Dj3rvHYolf6o63Mw"
 webrick:
   headers:
     "Access-Control-Allow-Origin": "*"
+
+# Giscus comments
+# IMPORTANT: Please replace these values with your actual Giscus settings.
+giscus:
+  repo: lemonzamong/lemonzamong.github.io
+  repo_id: R_kgDOP6FS1A
+  category: Comments
+  category_id: DIC_kwDOP6FS1M4CwIcQ
+  theme: preferred_color_scheme
