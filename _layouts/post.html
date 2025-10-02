@@ -20,6 +20,8 @@ layout: default
     {{ content }}
   </div>
   {% if site.giscus %}
-    {% include comments.html %}
+    <div id="comments" style="margin-top: 4em;">
+      {% include comments.html %}
+    </div>
   {% endif %}
 </div>

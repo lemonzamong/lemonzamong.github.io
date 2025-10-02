@@ -6,9 +6,19 @@
                 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
         <url>
             <loc>http://localhost:4000</loc>
-	    <lastmod>2025-10-02T13:09:41+09:00</lastmod>
+	    <lastmod>2025-10-02T14:14:40+09:00</lastmod>
             <priority>1.00</priority>
         </url><url>
+                <loc>http://localhost:4000/%EC%82%AC%ED%9A%8C%EA%B3%B5%ED%97%8C/%EA%B3%B5%ED%95%99%ED%95%9C%EB%A6%BC%EC%9B%90/yehs/%EA%B5%90%EC%9C%A1%EB%B4%89%EC%82%AC/2025/10/02/yehs-junior.html</loc>
+                <lastmod>2025-10-02T13:10:00+09:00</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url><url>
+                <loc>http://localhost:4000/kaist/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/5g/%ED%86%B5%EC%8B%A0/2025/10/02/project-kaist-feel.html</loc>
+                <lastmod>2025-10-02T12:00:00+09:00</lastmod>
+                <changefreq>weekly</changefreq>
+                <priority>0.80</priority>
+            </url><url>
                 <loc>http://localhost:4000/%EC%8A%A4%ED%83%80%ED%8A%B8%EC%97%85/%EC%B0%BD%EC%97%85/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/2025/10/02/project-wavelab.html</loc>
                 <lastmod>2025-10-02T00:25:36+09:00</lastmod>
                 <changefreq>weekly</changefreq>

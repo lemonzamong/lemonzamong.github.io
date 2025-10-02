@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie-edge">
+
+<!-- Google Fonts: Noto Sans KR (본문/제목) & Source Code Pro (코드) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/assets/css/style.css">
+<title>스몰셀 클러스터링 기반의 도심 내 5G 최적화</title>
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>스몰셀 클러스터링 기반의 도심 내 5G 최적화 | 혁준의 블로그</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="스몰셀 클러스터링 기반의 도심 내 5G 최적화" />
+<meta name="author" content="Hyeokjun Kwon" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="학부 과정 동안 저는 로봇이라는 제 주력 분야를 깊이 파고드는 동시에, 늘 인접 기술과의 융합 가능성에 대해 탐구해왔습니다. 그러던 중, KAIST 전기및전자공학부가 주최하고 LG유플러스가 후원하는 제4회 Get-FEEL Conference에 참여할 기회를 얻게 되었습니다. 전국 각지에서 모인 뛰어난 공학도들과 함께, 현실의 기술적 난제를 해결하는 이 컨퍼런스는 제게 또 다른 차원의 성장을 안겨주었습니다." />
+<meta property="og:description" content="학부 과정 동안 저는 로봇이라는 제 주력 분야를 깊이 파고드는 동시에, 늘 인접 기술과의 융합 가능성에 대해 탐구해왔습니다. 그러던 중, KAIST 전기및전자공학부가 주최하고 LG유플러스가 후원하는 제4회 Get-FEEL Conference에 참여할 기회를 얻게 되었습니다. 전국 각지에서 모인 뛰어난 공학도들과 함께, 현실의 기술적 난제를 해결하는 이 컨퍼런스는 제게 또 다른 차원의 성장을 안겨주었습니다." />
+<link rel="canonical" href="http://localhost:4000/kaist/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/5g/%ED%86%B5%EC%8B%A0/2025/10/02/project-kaist-feel.html" />
+<meta property="og:url" content="http://localhost:4000/kaist/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/5g/%ED%86%B5%EC%8B%A0/2025/10/02/project-kaist-feel.html" />
+<meta property="og:site_name" content="혁준의 블로그" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-10-02T12:00:00+09:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="스몰셀 클러스터링 기반의 도심 내 5G 최적화" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Hyeokjun Kwon"},"dateModified":"2025-10-02T12:00:00+09:00","datePublished":"2025-10-02T12:00:00+09:00","description":"학부 과정 동안 저는 로봇이라는 제 주력 분야를 깊이 파고드는 동시에, 늘 인접 기술과의 융합 가능성에 대해 탐구해왔습니다. 그러던 중, KAIST 전기및전자공학부가 주최하고 LG유플러스가 후원하는 제4회 Get-FEEL Conference에 참여할 기회를 얻게 되었습니다. 전국 각지에서 모인 뛰어난 공학도들과 함께, 현실의 기술적 난제를 해결하는 이 컨퍼런스는 제게 또 다른 차원의 성장을 안겨주었습니다.","headline":"스몰셀 클러스터링 기반의 도심 내 5G 최적화","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/kaist/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/5g/%ED%86%B5%EC%8B%A0/2025/10/02/project-kaist-feel.html"},"url":"http://localhost:4000/kaist/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/5g/%ED%86%B5%EC%8B%A0/2025/10/02/project-kaist-feel.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+</head><body>
+  <main class="container">
+    <section class="about">
+      <div class="about-header condensed">
+      <div class="about-title">
+      <a href="/">
+        
+        <img src="/assets/portfolio.png" alt="Hyeokjun Kwon" />
+        
+      </a>
+      <h2 id="title">
+        <a href="/">Hyeokjun Kwon</a>
+      </h2>
+      </div><p class="tagline">Developer & Creator</p></div>
+      
+      <ul class="social about-footer condensed"><a href="https://github.com/lemonzamong" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/hyeokjun-kwon-6022912b1" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://instagram.com/jjjun_04" target="_blank">
+          <li>
+            <i class="icon-instagram"></i>
+          </li>
+        </a></ul><p class="about-footer condensed">&copy;
+        2025</p><div class="about-footer condensed">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </section>
+    <section class="content">
+      <div class="post-container">
+  <a class="post-link" href="/kaist/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8/5g/%ED%86%B5%EC%8B%A0/2025/10/02/project-kaist-feel.html">
+    <h2 class="post-title">스몰셀 클러스터링 기반의 도심 내 5G 최적화</h2>
+  </a>
+  <div class="post-meta">
+    <div class="post-date"><i class="icon-calendar"></i>Oct 2, 2025</div><ul class="post-categories"><li>KAIST</li><li>프로젝트</li><li>5G</li><li>통신</li></ul></div>
+  <div class="post">
+    <p>학부 과정 동안 저는 로봇이라는 제 주력 분야를 깊이 파고드는 동시에, 늘 인접 기술과의 융합 가능성에 대해 탐구해왔습니다. 그러던 중, KAIST 전기및전자공학부가 주최하고 LG유플러스가 후원하는 <strong>제4회 Get-FEEL Conference</strong>에 참여할 기회를 얻게 되었습니다. 전국 각지에서 모인 뛰어난 공학도들과 함께, 현실의 기술적 난제를 해결하는 이 컨퍼런스는 제게 또 다른 차원의 성장을 안겨주었습니다.</p>
+
+<h2 id="1-문제-정의-5g-통신의-끊어진-고리를-찾아서">1. 문제 정의: 5G 통신의 끊어진 고리를 찾아서</h2>
+
+<p>저희 팀에게 주어진 과제는 명확했습니다: <strong>“차량 기반 스몰셀 클러스터링을 통해 도심의 5G 네트워크를 최적화하라.”</strong> 5G 기술이 상용화되었지만, 여전히 빌딩 숲이나 복잡한 골목에서는 통신이 끊기는 ‘음영 지역’이 존재합니다. 기존의 거대 기지국만으로는 이 모든 곳을 촘촘히 커버하기 어렵다는 현실적인 문제였습니다.</p>
+
+<p>가장 먼저 저희 팀이 떠올린 아이디어는 “도시에서 가장 예측 가능하고 넓은 범위를 움직이는 것은 무엇일까?”라는 질문이었습니다. 답은 바로 <strong>‘시내버스’</strong>였습니다. 정해진 노선을 따라 도시의 혈관처럼 구석구석을 누비는 시내버스에 스몰셀(소형 기지국)을 탑재한다면, 가장 효율적인 이동형 네트워크 허브를 만들 수 있을 것이라 확신했습니다.</p>
+
+<h2 id="2-아이디어를-현실로-클러스터링-알고리즘-구현">2. 아이디어를 현실로: 클러스터링 알고리즘 구현</h2>
+
+<p>저희의 핵심 전략은 스몰셀을 탑재한 버스들을 ‘클러스터 헤드’로 삼아, 주변 사용자들이 가장 가까운 버스에 동적으로 연결되는 시스템을 구축하는 것이었습니다. 이를 이론에만 그치지 않고 증명하기 위해, 저는 즉시 시뮬레이션 환경을 구축했습니다.</p>
+
+<p><img src="/assets/img/project-kaist-feel/small_cell_simulation.png" alt="5G Small Cell Clustering Simulation" />
+<em>(위: 수많은 사용자(파란 점)가 가장 가까운 버스(빨간 점)에 연결되는 클러스터링 시뮬레이션)</em></p>
+
+<p>수많은 사용자와 버스의 GPS 좌표 데이터를 생성하고, 각 사용자가 가장 가까운 버스를 효율적으로 찾도록 하기 위해 Python의 <code class="language-plaintext highlighter-rouge">scipy.spatial.cKDTree</code> 라이브러리를 활용한 k-최근접 이웃(k-NN) 알고리즘을 구현했습니다. 이 시뮬레이션을 통해 저희 아이디어가 통신 지연 시간을 줄이고 커버리지를 효과적으로 확대할 수 있음을 시각적, 정량적으로 입증할 수 있었습니다.</p>
+
+<h2 id="3-4일간의-여정이-남긴-것">3. 4일간의 여정이 남긴 것</h2>
+
+<p>KAIST Get-FEEL Conference는 단순한 수료증 한 장 이상의 의미를 가집니다.</p>
+
+<p>첫째, <strong>제 연구 분야의 경계를 확장하는 경험</strong>이었습니다. 로봇이 현실 세계에서 원활하게 작동하기 위해서는 끊김 없는 통신 인프라가 필수적입니다. 이번 프로젝트를 통해 5G 네트워크의 근본 원리를 이해하게 된 것은, 앞으로 제가 연구할 로봇들의 상호작용과 데이터 통신 시스템을 설계하는 데 중요한 자산이 될 것입니다.</p>
+
+<p>둘째, <strong>집단 지성의 힘을 체감</strong>했습니다. 각기 다른 강점을 가진 팀원들, 그리고 LG유플러스 현업 전문가들의 날카로운 피드백 속에서 아이디어를 다듬어가는 과정은 혼자서는 결코 얻을 수 없는 값진 경험이었습니다.</p>
+
+<p>KAIST에서의 짧지만 강렬했던 4일은, 제가 가진 기술을 새로운 분야에 적용하고, 동료들과의 협력을 통해 더 큰 문제를 해결해나가는 공학자로서의 역량을 한 단계 끌어올리는 귀중한 시간이었습니다. 이 경험은 제 주력 분야인 로보틱스 연구에 깊이를 더하고, 기술을 통해 실제 사회 문제를 해결하고자 하는 제 목표를 더욱 확고히 하는 계기가 되었습니다.</p>
+
+  </div>
+  
+    <div id="comments" style="margin-top: 4em;">
+      <script src="https://giscus.app/client.js"
+        data-repo="lemonzamong/lemonzamong.github.io"
+        data-repo-id="R_kgDOP6FS1A"
+        data-category="Comments"
+        data-category-id="DIC_kwDOP6FS1M4CwIcQ"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="preferred_color_scheme"
+        data-lang="ko"
+        crossorigin="anonymous"
+        async>
+</script>
+    </div>
+  
+</div>
+
+    </section>
+    <footer class="condensed">
+      <ul class="social about-footer condensed"><a href="https://github.com/lemonzamong" target="_blank">
+          <li>
+            <i class="icon-github-circled"></i>
+          </li>
+        </a><a href="https://www.linkedin.com/in/hyeokjun-kwon-6022912b1" target="_blank">
+          <li>
+            <i class="icon-linkedin-squared"></i>
+          </li>
+        </a><a href="https://instagram.com/jjjun_04" target="_blank">
+          <li>
+            <i class="icon-instagram"></i>
+          </li>
+        </a></ul><p class="about-footer condensed">&copy;
+        2025</p><div class="about-footer condensed">
+        <p>Dark Mode
+          <i class="icon-moon"></i>
+          <label class="switch">
+            <input type="checkbox" class="dark-mode-toggle">
+            <span class="slider round" onclick="toggleDarkMode()"></span>
+          </label>
+        </p>
+      </div>
+    </footer>
+  </main>
+  
+  <script type="text/javascript" src="/assets/js/darkmode.js"></script>
+  
+  <script src="/assets/js/simple-jekyll-search.min.js"></script>
+  <script src="/assets/js/search.js"></script>
+  
+</body>
+
+</html>
