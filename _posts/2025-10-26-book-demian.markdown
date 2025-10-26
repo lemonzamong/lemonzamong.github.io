@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "YEHS 주니어공학기술교실"
+title:  "데미안을 읽고"
 date:   2025-10-26 13:10:00 +0900
 categories: 데미안 독서
 ---
